@@ -1,0 +1,41 @@
+
+body {
+  
+	background-color: #6B88B3 !important;
+}
+
+.leftCol{
+	background-color: #FFF899 !important;
+	
+}
+.navbarMain{
+	background-color: #FFF899 !important;
+}
+a.nav-link{
+	background-color: #99C2FF !important;
+}
+a.active{
+	background-color: #6B88B3 !important;
+}
+.jumbotronFooter{
+	background-color: #FFF899 !important;
+	
+}
+.btn-info{
+	background-color: #99C2FF !important;
+}
+.btn-info.active{
+	background-color: #6B88B3 !important;
+}
+.embed-responsive-3by2{
+	
+	padding-top: 30%;
+}
+/*
+#99C2FF blue l
+#6B88B3 blue dark
+#FFF899 yellow
+#B3A26B yellow dark
+#000000 
+#FFFFFF
+*/
