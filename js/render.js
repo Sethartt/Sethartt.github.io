@@ -8,28 +8,29 @@ if ( WEBGL.isWebGLAvailable() === false ) {
 			animate();
 			function init() {
 				container = document.createElement( 'div' );
-				//viewer = document.getElementById( 'canvas' );
+				container.id = "display";
+				//container = document.getElementById( 'display' );
 				document.body.appendChild( container );
 				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.25, 20 );
 				camera.position.set( - 1.8, 0.9, 2.7 );
 				controls = new THREE.OrbitControls( camera );
 				controls.target.set( 0, - 0.2, - 0.2 );
 				controls.update();
-					loadMesh('PigShip');
+				loadMesh('PigShip');
 				renderer = new THREE.WebGLRenderer( { antialias: true } );
 				renderer.setPixelRatio( window.devicePixelRatio );
-				renderer.setSize( container.offsetWidth, window.innerHeight*2/3  );
+				renderer.setSize( container.offsetWidth, window.innerHeight*3/4  );
 				renderer.gammaOutput = true;
 				container.appendChild( renderer.domElement );
 				window.addEventListener( 'resize', onWindowResize, false );
-				// stats
+				//stats
 				//stats = new Stats();
 				//container.appendChild( stats.dom );
 			}
 			function onWindowResize() {
 				camera.aspect = window.innerWidth / window.innerHeight;
 				camera.updateProjectionMatrix();
-				renderer.setSize( container.offsetWidth, window.innerHeight*2/3  );
+				renderer.setSize( container.offsetWidth, window.innerHeight*3/4  );
 			}
 			//
 			function animate() {
@@ -77,4 +78,5 @@ if ( WEBGL.isWebGLAvailable() === false ) {
 				pmremCubeUVPacker.dispose();
 				scene.background = texture;
 		    });}
+
 	    
