@@ -822,7 +822,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 		if ( scope.enabled === false || scope.enableKeys === false || scope.enablePan === false ) return;
 
 		handleKeyDown( event );
-
+		
 	}
 
 	function onTouchStart( event ) {
@@ -927,14 +927,16 @@ THREE.OrbitControls = function ( object, domElement ) {
 	scope.domElement.addEventListener( 'contextmenu', onContextMenu, false );
 
 	scope.domElement.addEventListener( 'mousedown', onMouseDown, false );
-	scope.domElement.addEventListener( 'wheel', onMouseWheel, false );
+	scope.domElement.addEventListener( 'wheel', onMouseWheel, {passive: false} );
 
 	scope.domElement.addEventListener( 'touchstart', onTouchStart, false );
 	scope.domElement.addEventListener( 'touchend', onTouchEnd, false );
 	scope.domElement.addEventListener( 'touchmove', onTouchMove, false );
 
-	window.addEventListener( 'keydown', onKeyDown, false );
+	//window.addEventListener( 'keydown', onKeyDown, false );
+	var realWindow = window.parent || window;
 
+	realWindow.addEventListener( 'keydown', onKeyDown, false );
 	// force an update at start
 
 	this.update();

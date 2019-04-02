@@ -11,21 +11,26 @@ function createButton(value) {
     button.onclick = function() { doFunction(this.value); };
     context.appendChild(button);
 }
- 
+
 window.onload = function() {
 	makeDropdown();
 	models.forEach(createButton);
 
 };
 
+
 function makeDropdown(){
 	var dropDiv = document.createElement("div");
 	dropDiv.classList.add("dropdown");
-	var container = document.getElementById("display");
+	//dropDiv.classList.add("col-md-4");
+	var container = document.getElementById("modelsPicker");
 	container.appendChild(dropDiv);
 	var dropBtn = document.createElement("input");
 	dropBtn.type = "button";
 	dropBtn.classList.add("dropbtn");
+	dropBtn.classList.add("btn");
+	dropBtn.classList.add("btn-info");
+	dropBtn.classList.add("btn-block");
 	dropBtn.value = "Models";
 	dropBtn.onclick = myFunction;
 	dropDiv.appendChild(dropBtn);
@@ -33,11 +38,11 @@ function makeDropdown(){
 	contentBtn.classList.add("dropdown-content");
 	contentBtn.id = "myDropdown";
 	dropDiv.appendChild(contentBtn);
-	
-	
+
+
 }
 
-/* When the user clicks on the button, 
+/* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
@@ -55,4 +60,4 @@ window.onclick = function(event) {
       }
     }
   }
-} 
+}

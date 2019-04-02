@@ -8,8 +8,6 @@ if ( WEBGL.isWebGLAvailable() === false ) {
 			animate();
 			function init() {
 				container = document.createElement( 'div' );
-				container.id = "display";
-				//container = document.getElementById( 'display' );
 				document.body.appendChild( container );
 				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.25, 20 );
 				camera.position.set( - 1.8, 0.9, 2.7 );
@@ -19,8 +17,9 @@ if ( WEBGL.isWebGLAvailable() === false ) {
 				loadMesh('PigShip');
 				renderer = new THREE.WebGLRenderer( { antialias: true } );
 				renderer.setPixelRatio( window.devicePixelRatio );
-				renderer.setSize( container.offsetWidth, window.innerHeight*3/4  );
+				renderer.setSize( window.innerWidth, window.innerHeight  );
 				renderer.gammaOutput = true;
+
 				container.appendChild( renderer.domElement );
 				window.addEventListener( 'resize', onWindowResize, false );
 				//stats
@@ -30,28 +29,27 @@ if ( WEBGL.isWebGLAvailable() === false ) {
 			function onWindowResize() {
 				camera.aspect = window.innerWidth / window.innerHeight;
 				camera.updateProjectionMatrix();
-				renderer.setSize( container.offsetWidth, window.innerHeight*3/4  );
+				renderer.setSize(  window.innerWidth, window.innerHeight  );
 			}
-			//
+
 			function animate() {
 				requestAnimationFrame( animate );
 				renderer.render( scene, camera );
 				//stats.update();
 			}
-			
-			function doFunction(value, envMap) {
-			//var path = 'models/gltf/'+ value +'/' + value + '.gltf';
+
+			function doFunction(value) {
 			delete3DOBJ('currentMesh');
-			loadMesh(value, envMap);
+			loadMesh(value);
 			}
-			
+
 		    function delete3DOBJ(objName){
 		        var selectedObject = scene.getObjectByName(objName);
 		        scene.remove( selectedObject );
-		        
+
 		        animate();
 		    }
-			
+
 		    function loadMesh(meshName){
 				scene = new THREE.Scene();
 				var urls = [ 'posx.jpg', 'negx.jpg', 'posy.jpg', 'negy.jpg', 'posz.jpg', 'negz.jpg' ];
@@ -71,12 +69,10 @@ if ( WEBGL.isWebGLAvailable() === false ) {
 							child.material.envMap = envMap;
 						}
 					} );
-					
+
 					scene.add( gltf.scene );
 				} );
 				pmremGenerator.dispose();
 				pmremCubeUVPacker.dispose();
 				scene.background = texture;
 		    });}
-
-	    

@@ -1,37 +1,40 @@
 
 /* Layout  */
 body {
-  
-	background-color: #6B88B3 !important;
+  	color: #d6d6d6 !important;
+	background-color: #252525 !important;
 }
 
 .leftCol{
-	background-color: #FFF899 !important;
-	
+	background-color: #313131 !important;
+
 }
 .navbarMain{
-	background-color: #FFF899 !important;
+	background-color: #313131 !important;
 }
 a.nav-link{
-	background-color: #99C2FF !important;
+	background-color: #181818 !important;
 }
 a.active{
-	background-color: #6B88B3 !important;
+	background-color: #004480 !important;
+	color: #d6d6d6 !important;
+
 }
 .jumbotronFooter{
-	background-color: #FFF899 !important;
-	
+	background-color: #004480 !important;
+
 }
 .btn-info{
-	background-color: #99C2FF !important;
+	background-color: #181818 !important;
 }
 .btn-info.active{
 	background-color: #6B88B3 !important;
 }
 
+
 /*dropdown- models picker*/
 .dropbtn {
-  background-color: #3498DB;
+  background-color: #181818;
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -40,33 +43,30 @@ a.active{
 }
 
 .dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
+  background-color: #004480;
 }
 
 .dropdown {
   position: fixed;
   top: 0px;
   left: 0px;
-  
+
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
   min-width: 160px;
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown a:hover {background-color: #ddd;}
-
 .show {display: block;}
+
+ #modelsPicker{
+  position: fixed;
+  top: 0;
+  left:0;
+
+}
