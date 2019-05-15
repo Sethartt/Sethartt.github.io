@@ -1,5 +1,5 @@
 
-var models = ["hourglasse", "PigShip"];
+var models = ["hourglasse", "PigShip", "DemonGirl"];
 
 function createButton(value) {
 	var context = document.getElementById("myDropdown");

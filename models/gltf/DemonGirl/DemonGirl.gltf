@@ -1,0 +1,257 @@
+{
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5123,
+            "count" : 225816,
+            "max" : [
+                50706
+            ],
+            "min" : [
+                0
+            ],
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 50707,
+            "max" : [
+                0.9859930276870728,
+                0.6046469807624817,
+                2.8694989681243896
+            ],
+            "min" : [
+                -0.9778680205345154,
+                -0.6983230113983154,
+                -3.378019094467163
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 50707,
+            "max" : [
+                0.999969482421875,
+                0.999969482421875,
+                0.999969482421875
+            ],
+            "min" : [
+                -0.999969482421875,
+                -0.999969482421875,
+                -0.999908447265625
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5126,
+            "count" : 50707,
+            "max" : [
+                0.9973211288452148,
+                0.997321258764714
+            ],
+            "min" : [
+                0.00267887394875288,
+                0.0026787519454956055
+            ],
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5126,
+            "count" : 50707,
+            "max" : [
+                1.0,
+                1.0
+            ],
+            "min" : [
+                0.0,
+                0.0
+            ],
+            "type" : "VEC2"
+        }
+    ],
+    "asset" : {
+        "copyright" : "Sethartt",
+        "generator" : "Khronos Blender glTF 2.0 exporter",
+        "version" : "2.0"
+    },
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 451632,
+            "byteOffset" : 0,
+            "target" : 34963
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 608484,
+            "byteOffset" : 451632,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 608484,
+            "byteOffset" : 1060116,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 405656,
+            "byteOffset" : 1668600,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 405656,
+            "byteOffset" : 2074256,
+            "target" : 34962
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 2479912,
+            "uri" : "DemonGirl.bin"
+        }
+    ],
+    "images" : [
+        {
+            "name" : "DemongirlBakeTex",
+            "uri" : "DemongirlBakeTex.png"
+        },
+        {
+            "name" : "DemongirlBakeRough",
+            "uri" : "DemongirlBakeRough.jpg"
+        },
+        {
+            "name" : "DemongirlBakeNorm",
+            "uri" : "DemongirlBakeNorm.jpg"
+        }
+    ],
+    "materials" : [
+        {
+            "name" : "Material.001",
+            "normalTexture" : {
+                "index" : 2
+            },
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0
+                },
+                "metallicFactor" : 0.0,
+                "roughnessFactor" : 0.6272727251052856
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Body_Cube.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 2,
+                        "POSITION" : 1,
+                        "TEXCOORD_0" : 3,
+                        "TEXCOORD_1" : 4
+                    },
+                    "indices" : 0,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Body_Cube.001",
+            "rotation" : [
+                0.7071068286895752,
+                0.0,
+                -0.0,
+                0.7071067094802856
+            ],
+            "scale" : [
+                0.8700363039970398,
+                0.8700363039970398,
+                0.8700363039970398
+            ],
+            "translation" : [
+                0.0,
+                2.6774983406066895,
+                -0.0
+            ]
+        },
+        {
+            "name" : "Camera",
+            "rotation" : [
+                0.6935372352600098,
+                0.13361410796642303,
+                -0.13757184147834778,
+                0.6944259405136108
+            ],
+            "scale" : [
+                0.9999999403953552,
+                1.0,
+                1.0
+            ],
+            "translation" : [
+                1.3745278120040894,
+                1.5974987745285034,
+                3.394390344619751
+            ]
+        },
+        {
+            "name" : "Hemi",
+            "rotation" : [
+                0.3966940641403198,
+                0.0,
+                -0.0,
+                0.9179508686065674
+            ],
+            "translation" : [
+                -2.819617509841919,
+                5.310169219970703,
+                6.640783309936523
+            ]
+        },
+        {
+            "name" : "Sun",
+            "translation" : [
+                19.353206634521484,
+                6.787384033203125,
+                14.977355003356934
+            ]
+        }
+    ],
+    "samplers" : [
+        {}
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0,
+                1,
+                2,
+                3
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        },
+        {
+            "sampler" : 0,
+            "source" : 1
+        },
+        {
+            "sampler" : 0,
+            "source" : 2
+        }
+    ]
+}

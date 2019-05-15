@@ -9,7 +9,7 @@ if ( WEBGL.isWebGLAvailable() === false ) {
 			function init() {
 				container = document.createElement( 'div' );
 				document.body.appendChild( container );
-				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.25, 20 );
+				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.25, 100 );
 				camera.position.set( - 1.8, 0.9, 2.7 );
 				controls = new THREE.OrbitControls( camera );
 				controls.target.set( 0, - 0.2, - 0.2 );
